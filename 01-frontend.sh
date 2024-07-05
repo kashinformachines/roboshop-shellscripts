@@ -19,7 +19,7 @@ echo "changing to the html directory"
 cd /usr/share/nginx/html
 
 echo "unzipping the downloaded content here"
-unzip /tmp/frontend.zip
+unzip /tmp/frontend.zip -y
 
 echo "enabling the service"
 systemctl enable nginx
