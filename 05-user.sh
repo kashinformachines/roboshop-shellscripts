@@ -21,7 +21,7 @@ cd /app
 npm install
 
 echo "Setup SystemD User Service"
-cp user.service /etc/systemd/system/
+cp user.service /etc/systemd/system/user.service
 
 echo "Load the service."
 systemctl daemon-reload
