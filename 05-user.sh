@@ -1,3 +1,6 @@
+echo "Setup SystemD User Service"
+cp user.service /etc/systemd/system/user.service
+
 echo "Install NodeJS, By default NodeJS 16 is available, We would like to enable 20 version and install list."
 dnf module disable nodejs -y
 dnf module enable nodejs:20 -y
@@ -19,9 +22,6 @@ unzip /tmp/user.zip
 echo "download the dependencies."
 cd /app
 npm install
-
-echo "Setup SystemD User Service"
-cp user.service /etc/systemd/system/user.service
 
 echo "Load the service."
 systemctl daemon-reload
