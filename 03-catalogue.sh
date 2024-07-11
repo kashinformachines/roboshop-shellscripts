@@ -13,6 +13,9 @@ dnf install nodejs -y
 echo "Add application User"
 useradd roboshop
 
+echo "remove previous data so that it would not ask for confirmation to remove the data"
+rm -rf /app
+
 echo "Lets setup an app directory."
 mkdir /app
 
